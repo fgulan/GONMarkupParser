@@ -49,7 +49,7 @@
         NSString *sizeValue = [dicAttributes objectForKey:GONMarkupFont_TAG_size_ATT];
         if (sizeValue)
         {
-            size = [sizeValue floatValue];
+            size = [self fontSizeForSizeValue:[sizeValue intValue]];
         }
         else
         {
@@ -70,7 +70,7 @@
         else
         {
             // Font found, update its size
-            font = [UIFont fontWithDescriptor:font.fontDescriptor size:[sizeValue floatValue]];
+            font = [UIFont fontWithDescriptor:font.fontDescriptor size:size];
         }
 
         // Update configuration
@@ -83,10 +83,10 @@
     {
         // Font size only
         value = [dicAttributes objectForKey:GONMarkupFont_TAG_size_ATT];
-        if (value)
+        if (value && [value respondsToSelector:@selector(intValue)])
         {
             // Extract size
-            CGFloat size = [value floatValue];
+            CGFloat size = [self fontSizeForSizeValue:[value intValue]];
             
             // Look for current font
             UIFont *currentFont = [configurationDictionary objectForKey:NSFontAttributeName];
@@ -113,6 +113,20 @@
     // Empty font parameter, reset configuration
     if (resetFontAttribute)
         [configurationDictionary removeObjectForKey:NSFontAttributeName];
+}
+
+- (CGFloat)fontSizeForSizeValue:(NSInteger)sizeValue
+{
+    switch (sizeValue) {
+        case 1: return 10.0f;
+        case 2: return 13.0f;
+        case 3: return 16.0f;
+        case 4: return 18.0f;
+        case 5: return 24.0f;
+        case 6: return 32.0f;
+        case 7: return 48.0f;
+        default: return [UIFont systemFontSize];
+    }
 }
 
 @end

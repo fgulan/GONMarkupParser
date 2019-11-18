@@ -10,6 +10,8 @@
 #import "GONMarkup+Private.h"
 #import "GONMarkupDefaultMarkups.h"
 #import "GONMarkupParserUtils.h"
+#import "NSAttributedString+Helper.h"
+#import "NSString+Helper.h"
 
 #define MARKUP_REGEX                           @"(.*?)(<[^>]+>|\\Z)"
 #define ATTRIBUTES_REGEX                       @"([^\\s=]+)\\s*=\\s*('(\\\\'|[^']*')|\"(\\\\\"|[^\"])*\")"
@@ -442,7 +444,14 @@
                                       resultString:resultString];
     }
 
-    return [[NSAttributedString alloc] initWithString:inputString attributes:[self currentConfiguration]];
+    NSString *processedInput = inputString;
+    if ([resultString endsWithNewLine]) {
+        processedInput = [inputString stringByTrimmingLeadingSpace];
+    }
+    if ([processedInput stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet].length == 0) {
+        processedInput = @"";
+    }
+    return [[NSAttributedString alloc] initWithString:processedInput attributes:[self currentConfiguration]];
 }
 
 #pragma mark - Tag managements
