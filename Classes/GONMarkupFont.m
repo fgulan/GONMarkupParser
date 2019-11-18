@@ -125,7 +125,7 @@
         case 5: return 24.0f;
         case 6: return 32.0f;
         case 7: return 48.0f;
-        default: return [UIFont systemFontSize];
+        default: return sizeValue > 7 ? 48.0f : 10.0f;
     }
 }
 
