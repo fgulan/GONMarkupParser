@@ -28,3 +28,4 @@
 #import "GONMarkupSimple.h"
 #import "GONMarkupStrong.h"
 #import "GONMarkupTextStyle.h"
+#import "GONMarkupHeader.h"
