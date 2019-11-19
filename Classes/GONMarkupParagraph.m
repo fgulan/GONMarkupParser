@@ -41,4 +41,28 @@
     return [[NSAttributedString alloc] initWithString:prefix attributes:stringAttributes];
 }
 
+- (NSAttributedString *)suffixStringForContext:(NSMutableDictionary *)context
+                                    attributes:(NSDictionary *)dicAttributes
+                              stringAttributes:(NSDictionary *)stringAttributes
+                                  resultString:(NSAttributedString *)resultString
+{
+    NSString *suffix = @"";
+    
+    // Check for previous newline
+    if (resultString.string.length > 0)
+    {
+        // If last char isn't a new line, add a new line
+        if (![[NSCharacterSet newlineCharacterSet] characterIsMember:[resultString.string characterAtIndex:resultString.string.length - 1]])
+        {
+            suffix = @"\n\n";
+        } // Last char was a newline, so check if a blank line already exists before paragraph
+        else if (resultString.string.length > 1 && ![[NSCharacterSet newlineCharacterSet] characterIsMember:[resultString.string characterAtIndex:resultString.string.length - 2]])
+        {
+            suffix = @"\n";
+        }
+    }
+    
+    return [[NSAttributedString alloc] initWithString:suffix attributes:stringAttributes];
+}
+
 @end
