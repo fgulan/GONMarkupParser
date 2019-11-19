@@ -148,7 +148,7 @@
 		<key>title</key>
 		<string>All sort of tags</string>
 		<key>sample</key>
-		<string>&lt;strong&gt;Strong text.&lt;/strong&gt;&lt;br/&gt;&lt;p&gt;text element p.&lt;/p&gt;&lt;p&gt;text element p. multiline&lt;br/&gt;text element p. multiline&lt;/p&gt;&lt;b&gt;Bold element text.&lt;b/&gt;&lt;br/&gt;&lt;em&gt;EM tag&lt;/em&gt;</string>
+		<string>&lt;font size=1 color=&quot;FF0000&quot;&gt;&lt;strong&gt;Strong text.&lt;/strong&gt;&lt;br/&gt;&lt;p&gt;text element p.&lt;/p&gt;&lt;p&gt;text element p. multiline&lt;br/&gt;text element p. multiline&lt;/p&gt;&lt;b&gt;Bold element text.&lt;/b&gt;&lt;br/&gt;&lt;em&gt;EM tag&lt;/em&gt;&lt;/font&gt;</string>
 		<key>background</key>
 		<string>ABB7B7</string>
 	</dict>
@@ -157,6 +157,14 @@
 		<string>Paragraph multiline</string>
 		<key>sample</key>
 		<string>&lt;p&gt;text element p. multiline&lt;br/&gt;text element p. multiline&lt;/p&gt;&lt;b&gt;Bold element text.&lt;b/&gt;</string>
+		<key>background</key>
+		<string>ABB7B7</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Emphasize</string>
+		<key>sample</key>
+		<string>&lt;b&gt;Bold element text.&lt;/b&gt;ana</string>
 		<key>background</key>
 		<string>ABB7B7</string>
 	</dict>

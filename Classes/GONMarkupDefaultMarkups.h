@@ -29,3 +29,4 @@
 #import "GONMarkupStrong.h"
 #import "GONMarkupTextStyle.h"
 #import "GONMarkupHeader.h"
+#import "GONMarkupEmphasize.h"
