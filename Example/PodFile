@@ -1,10 +1,6 @@
-source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
 
-platform :ios, '7.0'
-
-abstract_target 'defaults' do
-	pod 'NSString+Color'
-	pod 'LazyProperty'
-
-    target 'GONMarkupParserSample'
+target 'GONMarkupParserSample' do
+  pod 'GONMarkupParser', :path => '../'
 end

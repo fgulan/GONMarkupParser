@@ -98,5 +98,4 @@
                                          animated:YES];
 }
 
-LAZY_PROPERTY(resultViewController);
 @end

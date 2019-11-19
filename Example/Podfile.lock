@@ -1,20 +1,23 @@
 PODS:
-  - LazyProperty (1.1.0)
-  - "NSString+Color (1.1.3)"
+  - GONMarkupParser (0.9.0):
+    - "NSString+Color"
+  - "NSString+Color (1.1.4)"
 
 DEPENDENCIES:
-  - LazyProperty
-  - "NSString+Color"
+  - GONMarkupParser (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - LazyProperty
+  trunk:
     - "NSString+Color"
 
+EXTERNAL SOURCES:
+  GONMarkupParser:
+    :path: "../"
+
 SPEC CHECKSUMS:
-  LazyProperty: f48a27d1ded2b29771874d3b193fb9d41eae95e4
-  "NSString+Color": 08fbd0b4cda31fd8602a5030f6bf1cedfed98203
+  GONMarkupParser: 7fdd1cfde6607c1685dcbefe280aad48351d99af
+  "NSString+Color": ea9e33d498d634adf56766c606c9128822094473
 
-PODFILE CHECKSUM: da4fe8d57558420c64da7bd826ddf7bd40be105f
+PODFILE CHECKSUM: 5d1d102df081ebec0dd2772da6b71fb9ebdaec9d
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.8.4
