@@ -36,7 +36,7 @@
 {
     GONMarkupList *markupList = [self markupForTag:GONMarkupList_ordered_TAG];
 
-    markupList.isOrdered =YES;
+    markupList.isOrdered = YES;
 
     return markupList;
 }

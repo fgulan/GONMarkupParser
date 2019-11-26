@@ -51,11 +51,11 @@
         style = [[NSMutableParagraphStyle alloc] init];
     }
     CGFloat fontSize = [self fontSizeForSizeValue:self.level];
-    style.lineSpacing = [self lineSpacingForFontSize:fontSize sizeValue:self.level];
+    style.paragraphSpacingBefore = [self lineSpacingForFontSize:fontSize sizeValue:self.level];
     
     [configurationDictionary setObject:style
                                 forKey:NSParagraphStyleAttributeName];
-    [configurationDictionary setObject:[UIFont boldSystemFontOfSize:fontSize]
+    [configurationDictionary setObject:[UIFont systemFontOfSize:fontSize weight:UIFontWeightBold]
                                  forKey:NSFontAttributeName];
 }
 
