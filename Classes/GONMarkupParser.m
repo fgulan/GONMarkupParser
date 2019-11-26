@@ -308,6 +308,7 @@
                 }
             }
         }
+        [self handleFinalClosingTag:tag resultString:resultString];
         [resultString endEditing];
 
         if (_configurationsStack.count != 0)
@@ -605,6 +606,12 @@
     LOG_IF_DEBUG(GONMarkupParserLogLevelWorkflow, @"Opening tag (%@)\nStack : %@\n", tag, _configurationsStack);
 
     return errorGenerated;
+}
+
+- (void)handleFinalClosingTag:(NSString *)tag resultString:(NSMutableAttributedString *)resultString
+{
+    GONMarkup *markup = [self markupForTag:tag];
+    [markup handleFinalClosingTag:tag resultString:resultString];
 }
 
 - (NSDictionary *)currentConfiguration

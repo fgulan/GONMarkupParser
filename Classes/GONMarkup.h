@@ -107,6 +107,12 @@
                 attributes:(NSDictionary *)dicAttributes
               resultString:(NSAttributedString *)resultString;
 
+/// This method will be invoked in last tag in hierarchy. Useful for paragraph tag to remove extra new line
+/// @param tag Current tag
+/// @param resultString String to edit
+- (void)handleFinalClosingTag:(NSString *)tag
+                 resultString:(NSMutableAttributedString *)resultString;
+
 @property (nonatomic, copy, readonly) NSString *tag;            // Have to be unique. Used to speed up rules matching, when using tags without parameters
 @property (nonatomic, weak, readonly) GONMarkupParser *parser;  // Parser the markup is attached to
 @end

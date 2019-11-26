@@ -189,5 +189,13 @@
 		<key>background</key>
 		<string>ABB7B7</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Paragraph</string>
+		<key>sample</key>
+		<string>&lt;br/&gt;&lt;p&gt;   &lt;font size=&quot;3&quot; color=&quot;#164282&quot;&gt;     &lt;strong&gt;Temperaturen &lt;/strong&gt;   &lt;/font&gt; &lt;/p&gt; </string>
+		<key>background</key>
+		<string>ABB7B7</string>
+	</dict>
 </array>
 </plist>

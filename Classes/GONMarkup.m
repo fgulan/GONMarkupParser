@@ -146,5 +146,8 @@
                 attributes:(NSDictionary *)dicAttributes
               resultString:(NSAttributedString *)resultString {}
 
+- (void)handleFinalClosingTag:(NSString *)tag
+                 resultString:(NSMutableAttributedString *)resultString {}
+
 @end
     

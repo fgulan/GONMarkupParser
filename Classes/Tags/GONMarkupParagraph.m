@@ -65,4 +65,14 @@
     return [[NSAttributedString alloc] initWithString:suffix attributes:stringAttributes];
 }
 
+- (void)handleFinalClosingTag:(NSString *)tag resultString:(NSMutableAttributedString *)resultString
+{
+    // Check for previous newline
+    if ([resultString.mutableString hasSuffix:@"\n\n"]) {
+        NSInteger index = resultString.mutableString.length - 1;
+        [resultString replaceCharactersInRange:NSMakeRange(index, 1) withString:@""];
+    }
+
+}
+
 @end
