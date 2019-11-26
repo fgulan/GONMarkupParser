@@ -168,5 +168,18 @@
 		<key>background</key>
 		<string>ABB7B7</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Big</string>
+		<key>sample</key>
+		<string>&lt;h4&gt;&lt;font color=&quot;#E4002B&quot;&gt;Fehlernummer: S0002 Motorschutzschalter Absaugung/Extern&lt;/font&gt;&lt;/h4&gt; &lt;p&gt;&lt;big&gt;&lt;ul&gt;
+&lt;li&gt;Motorschutzschalter prüfen&lt;/li&gt;
+&lt;li&gt;Gebläse blockiert&lt;/li&gt;
+&lt;li&gt;Motor thermisch prüfen&lt;/li&gt;
+&lt;li&gt;externe Anbindung prüfen&lt;/li&gt;
+&lt;/ul&gt;&lt;/big&gt;&lt;/p&gt;</string>
+		<key>background</key>
+		<string>ABB7B7</string>
+	</dict>
 </array>
 </plist>

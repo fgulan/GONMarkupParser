@@ -30,3 +30,4 @@
 #import "GONMarkupTextStyle.h"
 #import "GONMarkupHeader.h"
 #import "GONMarkupEmphasize.h"
+#import "GONMarkupFontStyles.h"

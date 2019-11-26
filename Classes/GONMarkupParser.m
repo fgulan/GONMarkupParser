@@ -59,6 +59,8 @@
     [parser addMarkup:[GONMarkupLineBreak lineBreakMarkup]];
     [parser addMarkup:[GONMarkupReset resetMarkup]];
     [parser addMarkup:[GONMarkupParagraph paragraphMarkup]];
+    [parser addMarkup:[GONMarkupFontStyles bigMarkup]];
+    [parser addMarkup:[GONMarkupFontStyles smallMarkup]];
 
     for (NSInteger level = 1; level < 7; ++level) {
         [parser addMarkup:[GONMarkupHeader paragraphMarkupForLevel:level]];
