@@ -181,5 +181,13 @@
 		<key>background</key>
 		<string>ABB7B7</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Sample 1</string>
+		<key>sample</key>
+		<string>&lt;font size=&quot;5&quot;&gt;&lt;b&gt;PREMAX FTPi&lt;/b&gt;&lt;/font&gt;&lt;br /&gt; &lt;strong&gt;Bandspülmaschine&lt;/strong&gt;&lt;br /&gt; &lt;font color=&quot;#164282&quot;&gt;   Küche&lt;br /&gt;   xeayan 867799950 &lt;/font&gt;  </string>
+		<key>background</key>
+		<string>ABB7B7</string>
+	</dict>
 </array>
 </plist>

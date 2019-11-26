@@ -445,13 +445,20 @@
     GONMarkup *currentMarker = [_markupsStack lastObject];
     if (currentMarker && ![currentMarker isKindOfClass:[NSNull class]])
     {
-        return [currentMarker updatedContentString:inputString
+        NSString *processedInput = [self trimInputStringIfNeeded:inputString resultString:resultString];
+        return [currentMarker updatedContentString:processedInput
                                            context:_currentContext
                                         attributes:[self attributesForCurrentTag]
                                   stringAttributes:[self currentConfiguration]
                                       resultString:resultString];
     }
 
+    NSString *processedInput = [self trimInputStringIfNeeded:inputString resultString:resultString];
+    return [[NSAttributedString alloc] initWithString:processedInput attributes:[self currentConfiguration]];
+}
+
+- (NSString *)trimInputStringIfNeeded:(NSString *)inputString resultString:(NSAttributedString *)resultString
+{
     NSString *processedInput = inputString;
     if ([resultString endsWithNewLine]) {
         processedInput = [inputString stringByTrimmingLeadingSpace];
@@ -459,10 +466,10 @@
     if ([processedInput stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet].length == 0) {
         processedInput = @"";
     }
-    return [[NSAttributedString alloc] initWithString:processedInput attributes:[self currentConfiguration]];
+    return processedInput;
 }
 
-#pragma mark - Tag managements
+ #pragma mark - Tag managements
 - (BOOL)handleClosingTag:(NSString *)tag
             resultString:(NSAttributedString *)resultString
                    error:(NSError **)error
