@@ -62,12 +62,12 @@
 - (CGFloat)fontSizeForSizeValue:(NSInteger)sizeValue
 {
     switch (sizeValue) {
-        case 1: return 32.0f;
-        case 2: return 24.0f;
-        case 3: return 18.0f;
-        case 4: return 16.0f;
-        case 5: return 13.0f;
-        case 6: return 10.0f;
+        case 1: return 30.0f;
+        case 2: return 23.0f;
+        case 3: return 17.0f;
+        case 4: return 15.0f;
+        case 5: return 12.0f;
+        case 6: return 11.0f;
         default: return sizeValue > 6 ? 32.0f : 10.0f;
     }
 }
@@ -75,12 +75,12 @@
 - (CGFloat)lineSpacingForFontSize:(CGFloat)fontSize sizeValue:(NSInteger)sizeValue
 {
     switch (sizeValue) {
-        case 1: return 0.67 * fontSize;
-        case 2: return 0.83 * fontSize;
-        case 3: return fontSize;
-        case 4: return 1.33 * fontSize;
-        case 5: return 1.67 * fontSize;
-        case 6: return 2.33 * fontSize;
+        case 1: return 0.66 * fontSize;
+        case 2: return 0.86 * fontSize;
+        case 3: return 1.18 * fontSize;
+        case 4: return 1.44 * fontSize;
+        case 5: return 1.76 * fontSize;
+        case 6: return 2.42 * fontSize;
         default: return sizeValue > 6 ? 0.67 * fontSize : 2.33 * fontSize;
     }
 }

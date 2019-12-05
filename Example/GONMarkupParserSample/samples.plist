@@ -140,7 +140,7 @@
 		<key>title</key>
 		<string>Header</string>
 		<key>sample</key>
-		<string>&lt;h1&gt;&lt;font color=&quot;FF0000&quot;&gt;H1 title&lt;/font&gt;&lt;/h1&gt;&lt;h2&gt;H2 title&lt;/h2&gt;&lt;h3&gt;H3 title&lt;/h3&gt;&lt;h4&gt;H4 title&lt;/h4&gt;&lt;h5&gt;H5 title&lt;/h5&gt;&lt;h6&gt;H6 title&lt;/h6&gt;</string>
+		<string>&lt;font color=&quot;FF0000&quot;&gt;&lt;h1&gt;H1 title&lt;/h1&gt;&lt;h2&gt;H2 title&lt;/h2&gt;&lt;h3&gt;H3 title&lt;/h3&gt;&lt;h4&gt;H4 title&lt;/h4&gt;&lt;h5&gt;H5 title&lt;/h5&gt;&lt;h6&gt;H6 title&lt;/h6&gt;&lt;/font&gt;</string>
 		<key>background</key>
 		<string>ABB7B7</string>
 	</dict>

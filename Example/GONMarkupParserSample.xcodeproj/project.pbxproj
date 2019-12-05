@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A183A9F238E51DD00E27A97 /* MainLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A183A9E238E51DD00E27A97 /* MainLaunch.storyboard */; };
 		5C404BCC1A1C9115007DCB2C /* DefaultConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C404BCB1A1C9115007DCB2C /* DefaultConfigurationViewController.m */; };
 		5C404BD01A1C951F007DCB2C /* DefaultConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C404BCF1A1C951F007DCB2C /* DefaultConfigurationViewController.xib */; };
 		5C4241B91C89995A00E5B289 /* lama.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4241B81C89995A00E5B289 /* lama.png */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A183A9E238E51DD00E27A97 /* MainLaunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainLaunch.storyboard; sourceTree = "<group>"; };
 		3D08B2B80A87935CF16E697B /* Pods-GONMarkupParserSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GONMarkupParserSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GONMarkupParserSample/Pods-GONMarkupParserSample.debug.xcconfig"; sourceTree = "<group>"; };
 		5C2E11E51B8A175F0065D29C /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		5C404BCA1A1C9115007DCB2C /* DefaultConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultConfigurationViewController.h; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				5CE2715C195B11E0007FCF44 /* main.m */,
 				5CE2715E195B11E0007FCF44 /* GONMarkupParserSample-Prefix.pch */,
 				5C65F3F21A112EBE005A76A3 /* MainWindow.xib */,
+				0A183A9E238E51DD00E27A97 /* MainLaunch.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				5C65F3FF1A1133F8005A76A3 /* SampleViewController.xib in Resources */,
 				5C65F3F31A112EBE005A76A3 /* MainWindow.xib in Resources */,
 				5CE2715B195B11E0007FCF44 /* InfoPlist.strings in Resources */,
+				0A183A9F238E51DD00E27A97 /* MainLaunch.storyboard in Resources */,
 				5C65F3F91A112F3A005A76A3 /* RootViewController.xib in Resources */,
 				5C404BD01A1C951F007DCB2C /* DefaultConfigurationViewController.xib in Resources */,
 				5C65F4071A1153A2005A76A3 /* ResultViewController.xib in Resources */,

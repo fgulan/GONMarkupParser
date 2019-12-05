@@ -26,9 +26,9 @@
                         <constraint firstAttribute="height" constant="2" id="ixd-lx-qtw"/>
                     </constraints>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kay-pb-0HH" userLabel="result">
-                    <rect key="frame" x="20" y="459" width="374" height="183.5"/>
-                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kay-pb-0HH" userLabel="result">
+                    <rect key="frame" x="20" y="459" width="374" height="417"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -54,6 +54,7 @@
                 <constraint firstItem="Kay-pb-0HH" firstAttribute="top" secondItem="DbL-6G-pYC" secondAttribute="bottom" constant="10" id="atK-dh-19o"/>
                 <constraint firstItem="2bg-WY-COJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="bpK-Vi-Wi7"/>
                 <constraint firstItem="DbL-6G-pYC" firstAttribute="top" secondItem="2bg-WY-COJ" secondAttribute="bottom" constant="10" id="q2o-Jm-Uq2"/>
+                <constraint firstAttribute="bottom" secondItem="Kay-pb-0HH" secondAttribute="bottom" constant="20" id="sX1-Kz-GN6"/>
                 <constraint firstAttribute="trailing" secondItem="Kay-pb-0HH" secondAttribute="trailing" constant="20" id="wlN-fq-1qp"/>
                 <constraint firstAttribute="centerY" secondItem="DbL-6G-pYC" secondAttribute="centerY" id="y6c-MW-W5L"/>
             </constraints>
