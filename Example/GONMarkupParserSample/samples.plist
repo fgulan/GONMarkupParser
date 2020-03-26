@@ -205,5 +205,13 @@
 		<key>background</key>
 		<string>ABB7B7</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Trimming</string>
+		<key>sample</key>
+		<string>&lt;font size=&quot;2&quot; color=&quot;#FFBB00&quot;&gt;   SERVICE            PARTNER &lt;/font&gt; &lt;br/&gt; GÖTTFERT WERKSTOFF-PRÜFMASCHINEN GMBH&lt;br /&gt; DE&lt;br /&gt;  </string>
+		<key>background</key>
+		<string>ABB7B7</string>
+	</dict>
 </array>
 </plist>

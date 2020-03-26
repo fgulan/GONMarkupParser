@@ -211,13 +211,15 @@
     return resString;
 }
 
-- (NSMutableAttributedString *)parseString:(NSString *)inputString error:(NSError **)error
+- (NSMutableAttributedString *)parseString:(NSString *)bareInputString error:(NSError **)error
 {
     // Init stack
     _configurationsStack   = [[NSMutableArray alloc] init];
     _currentContext        = [[NSMutableDictionary alloc] init];
     _markupsStack          = [[NSMutableArray alloc] init];
     _markupAttributesStack = [[NSMutableArray alloc] init];
+    
+    NSString *inputString = [self clearConsecutiveSpacesFrom:bareInputString];
 
     // Parse string
     NSArray *results = [_markupRegex matchesInString:inputString
@@ -379,6 +381,19 @@
     return [emptyTags containsObject:[tag lowercaseString]];
 }
 
+- (NSString *)clearConsecutiveSpacesFrom:(NSString *)inputString
+{
+    static dispatch_once_t onceToken;
+    static NSRegularExpression *regex;
+    dispatch_once(&onceToken, ^{
+        regex = [NSRegularExpression regularExpressionWithPattern:@"  +" options:NSRegularExpressionCaseInsensitive error:nil];
+    });
+    if (!regex) {
+        return inputString;
+    }
+    return [regex stringByReplacingMatchesInString:inputString options:0 range:NSMakeRange(0, [inputString length]) withTemplate:@" "];;
+}
+
 - (NSDictionary *)extractAttributesFromString:(NSString *)string
 {
     NSMutableDictionary *dicAttributes = [[NSMutableDictionary alloc] init];
@@ -472,7 +487,7 @@
 - (NSString *)trimInputStringIfNeeded:(NSString *)inputString resultString:(NSAttributedString *)resultString
 {
     NSString *processedInput = inputString;
-    if ([resultString endsWithNewLine]) {
+    if ([resultString endsWithNewLine] || resultString.string.length == 0) {
         processedInput = [inputString stringByTrimmingLeadingSpace];
     }
     if ([processedInput stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet].length == 0) {
