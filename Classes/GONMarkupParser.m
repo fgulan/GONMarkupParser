@@ -34,6 +34,7 @@
 @property (nonatomic, strong) NSMutableArray      *markupsStack;             // Markups stack
 @property (nonatomic, strong) NSMutableArray      *markupAttributesStack;    // Markups attributes stack
 @property (nonatomic, strong) NSMutableDictionary *currentContext;           // Current context
+
 @end
 
 @implementation GONMarkupParser
@@ -280,7 +281,7 @@
                     tag = [self extractTagAndPushAttributesFromTag:tag];
                     
                     // Handle autoclosing markup
-                    if (autoclosingMarkup)
+                    if (autoclosingMarkup || [self isEmptyTag:tag])
                     {
                         // Opening tag
                         [self handleOpeningTag:tag
@@ -366,6 +367,16 @@
         return nil;
 
     return attributes;
+}
+
+- (BOOL)isEmptyTag:(NSString *)tag
+{
+    static dispatch_once_t onceToken;
+    static NSArray<NSString *> *emptyTags;
+    dispatch_once(&onceToken, ^{
+        emptyTags = @[@"br", @"hr", @"source", @"input", @"link", @"meta", @"img"];
+    });
+    return [emptyTags containsObject:[tag lowercaseString]];
 }
 
 - (NSDictionary *)extractAttributesFromString:(NSString *)string

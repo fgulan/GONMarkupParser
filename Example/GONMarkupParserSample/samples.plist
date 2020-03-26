@@ -197,5 +197,13 @@
 		<key>background</key>
 		<string>ABB7B7</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Breakline</string>
+		<key>sample</key>
+		<string>AM&lt;br&gt;      DONAUESCHINGEN &lt;br&gt; Deutschland</string>
+		<key>background</key>
+		<string>ABB7B7</string>
+	</dict>
 </array>
 </plist>
