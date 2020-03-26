@@ -59,6 +59,23 @@
                                  forKey:NSFontAttributeName];
 }
 
+- (NSAttributedString *)suffixStringForContext:(NSMutableDictionary *)context
+                                    attributes:(NSDictionary *)dicAttributes
+                              stringAttributes:(NSDictionary *)stringAttributes
+                                  resultString:(NSAttributedString *)resultString
+{
+    NSString *prefix = @"";
+    // Check for previous newline
+    if (resultString.string.length > 0) {
+        // If last char isn't a new line, add a new line
+        if (![[NSCharacterSet newlineCharacterSet] characterIsMember:[resultString.string characterAtIndex:resultString.string.length - 1]]) {
+            prefix = @"\n";
+        }
+    }
+    
+    return [[NSAttributedString alloc] initWithString:prefix attributes:stringAttributes];
+}
+
 - (CGFloat)fontSizeForSizeValue:(NSInteger)sizeValue
 {
     switch (sizeValue) {

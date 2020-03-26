@@ -391,7 +391,7 @@
     if (!regex) {
         return inputString;
     }
-    return [regex stringByReplacingMatchesInString:inputString options:0 range:NSMakeRange(0, [inputString length]) withTemplate:@" "];;
+    return [regex stringByReplacingMatchesInString:inputString options:0 range:NSMakeRange(0, [inputString length]) withTemplate:@" "];
 }
 
 - (NSDictionary *)extractAttributesFromString:(NSString *)string
