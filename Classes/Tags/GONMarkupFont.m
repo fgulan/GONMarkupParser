@@ -118,14 +118,14 @@
 - (CGFloat)fontSizeForSizeValue:(NSInteger)sizeValue
 {
     switch (sizeValue) {
-        case 1: return 13.0f;
-        case 2: return 15.0f;
+        case 1: return 10.0f;
+        case 2: return 13.0f;
         case 3: return 16.0f;
-        case 4: return 28.0f;
+        case 4: return 18.0f;
         case 5: return 24.0f;
         case 6: return 32.0f;
         case 7: return 48.0f;
-        default: return sizeValue > 7 ? 48.0f : 13.0f;
+        default: return sizeValue > 7 ? 48.0f : 10.0f;
     }
 }
 
